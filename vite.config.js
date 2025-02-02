@@ -10,5 +10,10 @@ export default defineConfig({
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
-  }
+  },
+  server: {
+    hmr: {
+      overlay: false, // Desativa a sobreposição de erros.
+    },
+  },
 })
